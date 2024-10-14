@@ -1,14 +1,9 @@
 import { Link } from "react-router-dom";
 
 export const Landing = () => {
-    // create react app
-    // clean the app
-    // add tailwind
-    // create routes
-    // add landing page content
-    // polish landing page
-    // add responsiveness
-    // add firebase login
+    // implement sign in with google feature
+    // use firestore to implement user login/signup
+
     // add content to dashboard
 
     return(

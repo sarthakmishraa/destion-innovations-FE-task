@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import { SignInWithGoogle } from "../components/SignInWithGoogle"
+
 export const Signup = () => {
     const handleSubmit = (e: React.SyntheticEvent) => {
         e.preventDefault();
@@ -39,11 +41,13 @@ export const Signup = () => {
                 />
                 <input onSubmit={ handleSubmit } className="sm:w-[25%] cursor-pointer font-semibold p-2 border-2 border-gray-600 rounded-sm transition-all bg-black text-white hover:bg-white hover:text-black" type="submit" />
             </form>
-            <div>
-                <Link to="/login" className="text-lg font-semibold hover:underline">
+            <div className="text-lg font-semibold space-y-4">
+                <Link to="/login" className="hover:underline">
                     <p>Already have an account? Log In</p>
                 </Link>
+                <p>Or</p>
             </div>
+            <SignInWithGoogle />
         </div>
     )
 }
