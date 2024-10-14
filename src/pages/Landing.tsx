@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 export const Landing = () => {
-    // implement sign in with google feature
     // use firestore to implement user login/signup
+    // add password hashing once signup and login works
 
     // add content to dashboard
 

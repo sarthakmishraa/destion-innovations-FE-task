@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { signInWithPopup } from "firebase/auth";
+import { toast } from "react-toastify";
 
 import { auth, provider } from "../config/firebase";
 
@@ -8,6 +9,7 @@ export const SignInWithGoogle = () => {
     
     const handleGoogleSignIn = async () => {
         await signInWithPopup(auth, provider);
+        toast.dark("Signed In successful");
         navigate("/dashboard");
     }
 

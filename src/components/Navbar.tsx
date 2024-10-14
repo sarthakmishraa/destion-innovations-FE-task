@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { signOut } from "firebase/auth";
+import { toast } from "react-toastify";
 
 import { auth } from "../config/firebase";
 
 export const Navbar = () => {
     const [user] = useAuthState(auth);
+
+    const signOutFromGoogle = async () => {
+        await signOut(auth);
+        toast.dark("Signed Out successfully");
+    };
 
     return(
         <div className="text-lg font-semibold p-4 flex justify-around">
@@ -19,7 +26,7 @@ export const Navbar = () => {
             <div className="flex space-x-4">
                 {
                     user ? (
-                        <Link to="/" className="hover:underline">
+                        <Link to="/" onClick={ signOutFromGoogle } className="hover:underline">
                             <p>Sign Out</p>
                         </Link>
                     ):(

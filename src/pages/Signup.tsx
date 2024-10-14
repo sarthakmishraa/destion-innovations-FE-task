@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 
-import { SignInWithGoogle } from "../components/SignInWithGoogle"
+import { SignInWithGoogle } from "../components/SignInWithGoogle";
 
 export const Signup = () => {
-    const handleSubmit = (e: React.SyntheticEvent) => {
+    
+    const handleSubmit = async (e: React.SyntheticEvent) => {
         e.preventDefault();
     };
+    
     return(
         <div className="py-20 xl:px-60 text-center space-y-6">
             <form className="flex flex-col items-center space-y-4">
